@@ -1,0 +1,13 @@
+<h1>Login details</h1>
+
+<form action="{% url 'login:home'  %}" method="POST">
+	{% csrf_token %}
+	<input type="text" placeholder="Enter Team Name" name="team_1"><strong>{{ error_team_1 }}</strong><br>
+	<input type="text" placeholder="First user's Name" name="user_1"><strong>{{ error_user_1 }}</strong><br>	
+	<input type="password" placeholder="First user's Password" name="password_1"><br>
+	<input type="text" placeholder="Second user's Name" name="user_2"><br>	
+	<input type="password" placeholder="Second user's Password" name="password_2"><br>
+	<input type="email" placeholder="Enter Email" name="email_1"><br>
+	<input type="submit" value="submit">
+</form>  
+</div>
